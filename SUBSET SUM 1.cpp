@@ -39,4 +39,3 @@ So for n index time complexity for O(2^n) and for sorting it will take (2^n log(
 
 Space Complexity: O(2^n) for storing subset sums, since 2^n subsets can be generated for an array of size n.
 */
-

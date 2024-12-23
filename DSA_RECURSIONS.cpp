@@ -341,7 +341,6 @@ signed main()
     cout<<func(n);
     return 0;
 }
-
 ITERATIVE VERSION PSEUDO CODE
  F[0]=0,F[1]=1
  FOR(INT I=2;I<=N;I++)
@@ -349,7 +348,3 @@ ITERATIVE VERSION PSEUDO CODE
        F[I]=F[I-1]+F[I-2];
  }
 */
-
-
-
-

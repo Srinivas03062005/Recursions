@@ -177,5 +177,3 @@ int main()
 	cout<<total;
 }*/
 
-
-

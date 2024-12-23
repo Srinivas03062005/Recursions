@@ -1,7 +1,7 @@
 //subsequence=a contigious or non contigious sequence which follows the order is called subsequence
 //sub array =contigious 
 
-
+/*
 #include<bits/stdc++.h>
 using namespace std;
 void printf(int ind,vector<int> &ds,int arr[],int n)
@@ -29,11 +29,11 @@ void printf(int ind,vector<int> &ds,int arr[],int n)
 }
 int main()
 {
-	int arr[]={3,0,2,1,1};
-	int n=5;
+	int arr[]={3,2,1};
+	int n=3;
 	vector<int> ds;
 	printf(0,ds,arr,n);
-}
+}*/
 /*TC IS O((2^N)*N)
 SC IS O(N) BCZ MAXIMUM WAITING FUNCTIONS ARE N ONLY */
 
@@ -43,7 +43,7 @@ SC IS O(N) BCZ MAXIMUM WAITING FUNCTIONS ARE N ONLY */
 
 //REVERSE LO FIRST    NOT PICK AFTER PICK
 
-/*#include<bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
 void printf(int ind,vector<int> &ds,int arr[],int n)
 {
@@ -75,6 +75,6 @@ int main()
 	int n=3;
 	vector<int> ds;
 	printf(0,ds,arr,n);
-}*/
+}
 
 

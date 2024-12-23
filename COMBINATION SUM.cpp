@@ -13,7 +13,7 @@ void combination(int ind,vector<int> &ds,int target,int arr[],int n)
 		{
 			for(int i=0;i<ds.size();i++)
 			{
-				cout<<ds[i]<<" ";
+				cout<<ds[i]<<" "; 
 			}
 			cout<<endl;
 		}

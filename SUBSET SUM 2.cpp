@@ -1,36 +1,48 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
-void subsetsum2(int ind,vector<int> &ds,int arr[],int n)
+void printAns(vector < vector < int >> & ans) 
 {
-	cout<<"[ ";
-	for(int i=0;i<ds.size();i++)
-	{
-	     cout<<ds[i]<<" ";
-	}
-	cout<<']';
-	cout<<endl;
-	for(int i=ind;i<n;i++)
-	{
-		if(i!=ind && arr[i]==arr[i-1])
-		{
-			continue;
-		}
-		ds.push_back(arr[i]);
-		subsetsum2(i+1,ds,arr, n);
-		ds.pop_back();
-	}
+  cout << "[ ";
+  for (int i = 0; i < ans.size(); i++) 
+  {
+    cout << "[ ";
+    for (int j = 0; j < ans[i].size(); j++)
+      cout << ans[i][j] << " ";
+    cout << "]";
+  }
+  cout << " ]";
 }
-int main()
+class Solution 
 {
-	int n;
-	cin>>n;
-	int a[n];
-	for(int i=0;i<n;i++)
-	{
-		cin>>a[i];
-	}
-	sort(a,a+n);
-	vector<int> ds;
-	subsetsum2(0,ds,a,n);
-	return 0;
+  public:
+    void fun(int ind, vector < int > & nums, vector < int > &ds, vector<vector<int>> &ans) 
+    {
+       ans.push_back(ds);
+       for(int i=ind;i<nums.size();i++)
+       {
+           if(i!=ind && nums[i]==nums[i-1])
+           {
+            continue;
+           }
+           ds.push_back(nums[i]);
+           fun(i+1,nums,ds,ans);
+           ds.pop_back();
+       }
+    }
+  vector < vector < int >> subsetsWithDup(vector < int > & nums) 
+  {
+    vector < vector < int >> ans;
+    vector < int > ds;
+    sort(nums.begin(),nums.end());
+    fun(0, nums, ds, ans);
+    return ans;
+  }
+};
+int main() 
+{
+  Solution obj;
+  vector < int > nums = {1, 2, 2};
+  vector < vector < int >> ans = obj.subsetsWithDup(nums);
+  printAns(ans);
+  return 0;
 }
